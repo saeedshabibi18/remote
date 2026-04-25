@@ -1,1 +1,1 @@
-# docker-testapp
+This project demonstrates a Dockerized Node.js application integrated with MongoDB and Mongo Express using Docker Compose.
