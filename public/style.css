@@ -14,6 +14,24 @@ body {
     padding: 2rem 1rem;
 }
 
+.success-banner {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    background: #d1fae5;
+    color: #065f46;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 2px solid #6ee7b7;
+}
+
 .page-wrapper {
     display: flex;
     align-items: center;

@@ -53,7 +53,7 @@ app.post("/addUser", async (req, res) => {
 
     console.log(result);
 
-    res.send("User added successfully");
+    res.redirect('/?success=true');
   } catch (err) {
     console.log(err);
 

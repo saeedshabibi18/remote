@@ -7,8 +7,10 @@
     <title>XYZ University — Student Portal</title>
 </head>
 <body>
-
     <div class="page-wrapper">
+        <div class="success-banner" id="successBanner">
+    Account created successfully! Welcome to XYZ University.
+    </div>
         <div class="card">
 
             <span class="badge">XYZ University Portal</span>
@@ -21,7 +23,7 @@
                 <div class="feature-pill"><div class="feature-dot"></div>Study Resources</div>
             </div>
 
-            <form action="/addUser" method="POST" target="_blank" id="signupForm">
+            <form action="/addUser" method="POST" id="signupForm">
 
                 <div class="field-group">
                     <label for="email">Email address</label>
@@ -57,5 +59,21 @@
         </div>
     </div>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('success') === 'true') {
+                const banner = document.getElementById('successBanner');
+                banner.style.display = 'block';
+                banner.style.opacity = '1';
+                setTimeout(() => {
+                    banner.style.opacity = '0';
+                    setTimeout(() => {
+                        banner.style.display = 'none';
+                    }, 250);
+                }, 3600);
+            }
+        });
+    </script>
 </body>
 </html>
