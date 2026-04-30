@@ -4,29 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <title>Home Page</title>
+    <title>XYZ University — Student Portal</title>
 </head>
 <body>
-    <h1>Hi student, Welcome to XYZ University!</h1>
-    <p>You can sign up to the platform to access all important notes & lectures.</p>
 
-    <form action="/addUser" method="POST" target="_blank" id="signupForm">
-        <div class="field">
-            <label for="email">Email: </label>
-            <input type="text" placeholder="jane@email.com" name="email">
+    <div class="page-wrapper">
+        <div class="card">
+
+            <span class="badge">XYZ University Portal</span>
+            <h1>Welcome, Student!</h1>
+            <p class="subtitle">Create your account to access notes, lectures, and study materials.</p>
+
+            <div class="features">
+                <div class="feature-pill"><div class="feature-dot"></div>Lecture Notes</div>
+                <div class="feature-pill"><div class="feature-dot"></div>Video Lectures</div>
+                <div class="feature-pill"><div class="feature-dot"></div>Study Resources</div>
+            </div>
+
+            <form action="/addUser" method="POST" target="_blank" id="signupForm">
+
+                <div class="field-group">
+                    <label for="email">Email address</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">✉</span>
+                        <input type="text" id="email" placeholder="jane@email.com" name="email">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">◉</span>
+                        <input type="text" id="username" placeholder="Jane Doe" name="username">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="password" placeholder="Create a strong password" name="password">
+                    </div>
+                </div>
+
+                <button id="formBtn" type="submit">Create Account</button>
+
+            </form>
+
+            <div class="divider">or</div>
+            <p class="login-link">Already have an account? <span>Sign in</span></p>
+
         </div>
-        <div class="field">    
-        <label for="username">Username: </label>
-            <input type="text" placeholder="Jane Doe" name="username">
-        </div>
-        <div class="field">
-            <label for="password">Password: </label>
-            <input type="password" placeholder="password" name="password">
-        </div>
-        
-        <button id="formBtn">Create Account</button>
-        
-    </form>
+    </div>
+
 </body>
-
 </html>
